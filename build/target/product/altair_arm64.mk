@@ -14,6 +14,6 @@
 
 $(call inherit-product, build/target/product/aosp_arm64.mk)
 
-include vendor/altair/build/target/product/lineage_generic_target.mk
+include vendor/altair/build/target/product/altair_generic_target.mk
 
-PRODUCT_NAME := lineage_arm64
+PRODUCT_NAME := altair_arm64

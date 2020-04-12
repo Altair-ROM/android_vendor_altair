@@ -138,7 +138,6 @@ PRODUCT_PACKAGES += \
     Backgrounds \
     LineageParts \
     LineageSettingsProvider \
-    LineageSetupWizard \
     Eleven \
     Jelly \
     LockClock \

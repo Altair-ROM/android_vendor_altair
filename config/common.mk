@@ -304,7 +304,7 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 -include vendor/altair-priv/keys/keys.mk
 
-ALTAIR_DISPLAY_VERSION := $(ALTAIR_VERSION)
+ALTAIR_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(DISPLAY_BUILDTYPE)-$(shell date +%Y%m%d)
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)

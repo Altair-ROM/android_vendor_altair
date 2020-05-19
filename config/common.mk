@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/altair/config/permissions/org.lineageos.android.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.android.xml
 
+# Altair System Permission
+PRODUCT_COPY_FILES += \
+    vendor/altair/config/permissions/privapp-permissions-altair-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-altair-system.xml
+
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce

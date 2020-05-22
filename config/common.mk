@@ -267,5 +267,8 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+# Themes and Overlays
+-include vendor/themes/themes.mk
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/altair/config/partner_gms.mk

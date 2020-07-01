@@ -1,5 +1,5 @@
 # Inherit common mobile Lineage stuff
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/altair/config/common.mk)
 
 # Default notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -34,21 +34,6 @@ PRODUCT_PACKAGES += \
     TrebuchetQuickStep \
     WeatherProvider
 
-# Accents
-PRODUCT_PACKAGES += \
-    LineageBlackTheme \
-    LineageDarkTheme \
-    LineageBlackAccent \
-    LineageBlueAccent \
-    LineageBrownAccent \
-    LineageCyanAccent \
-    LineageGreenAccent \
-    LineageOrangeAccent \
-    LineagePinkAccent \
-    LineagePurpleAccent \
-    LineageRedAccent \
-    LineageYellowAccent
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -64,6 +49,9 @@ endif
 # Customizations
 PRODUCT_PACKAGES += \
     LineageNavigationBarNoHint
+
+# Themes and Overlays
+$(call inherit-product, packages/overlays/Lineage/themes.mk)
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

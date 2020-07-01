@@ -1,2 +1,2 @@
 # Include LineageOS versions
-include $(TOPDIR)vendor/lineage/build/core/main_version.mk
+include $(TOPDIR)vendor/altair/build/core/main_version.mk

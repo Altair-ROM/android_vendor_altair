@@ -14,12 +14,29 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# Altair ROM OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+ALTAIR_TARGET_PACKAGE := $(PRODUCT_OUT)/Altair-$(ALTAIR_VERSION).zip
 
-.PHONY: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+.PHONY: altair
+altair: $(INTERNAL_OTA_PACKAGE_TARGET)
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ALTAIR_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(ALTAIR_TARGET_PACKAGE) > $(ALTAIR_TARGET_PACKAGE).md5sum
+	@echo " "
+	@echo " "
+	@echo " "
+	@echo -e ${CL_WHT}"═══════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_BLU}"  █████╗ ██╗  ████████╗ █████╗ ██╗██████╗     ██████╗  ██████╗ ███╗   ███╗ "${CL_RST}
+	@echo -e ${CL_BLU}" ██╔══██╗██║  ╚══██╔══╝██╔══██╗██║██╔══██╗    ██╔══██╗██╔═══██╗████╗ ████║ "${CL_RST}
+	@echo -e ${CL_BLU}" ███████║██║     ██║   ███████║██║██████╔╝    ██████╔╝██║   ██║██╔████╔██║ "${CL_RST}
+	@echo -e ${CL_BLU}" ██╔══██║██║     ██║   ██╔══██║██║██╔══██╗    ██╔══██╗██║   ██║██║╚██╔╝██║ "${CL_RST}
+	@echo -e ${CL_BLU}" ██║  ██║███████╗██║   ██║  ██║██║██║  ██║    ██║  ██║╚██████╔╝██║ ╚═╝ ██║ "${CL_RST}
+	@echo -e ${CL_BLU}" ╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝ "${CL_RST}
+	@echo -e ${CL_WHT}"═══════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_WHT}" Path:"${CL_BOLD}${CL_GRN} $(PRODUCT_OUT)${CL_RST}
+	@echo -e ${CL_WHT}" File:"${CL_BOLD}${CL_GRN} Altair-$(ALTAIR_VERSION)${CL_RST}
+	@echo -e ${CL_WHT}"  MD5:"${CL_BOLD}${CL_GRN}" `cat $(ALTAIR_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`"${CL_RST}
+	@echo -e ${CL_WHT}" Size:"${CL_BOLD}${CL_GRN}" `ls -lah $(ALTAIR_TARGET_PACKAGE) | cut -d ' ' -f 5`"${CL_RST}
+	@echo -e ${CL_WHT}"═══════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo " "
+

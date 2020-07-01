@@ -50,9 +50,6 @@ endif
 PRODUCT_PACKAGES += \
     LineageNavigationBarNoHint
 
-# Themes and Overlays
-$(call inherit-product, packages/overlays/Lineage/themes.mk)
-
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true

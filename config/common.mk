@@ -124,6 +124,9 @@ PRODUCT_PACKAGES += \
     LineageThemesStub \
     ThemePicker
 
+# Volume Plugins
+$(call inherit-product, packages/apps/Plugins/plugins.mk)
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
